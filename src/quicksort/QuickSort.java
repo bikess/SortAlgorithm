@@ -1,9 +1,18 @@
 package quicksort;
 
+
 public class QuickSort {
 	public static int patitonArray(int []A,int begin,int end){
 //		最后位置的元素作为分割元素
-		int x = A[end];
+//		int x = A[end];
+//		在begin到end之间随机选取一个元素作为分割元素有利于提高快速排序的性能
+	
+		int pla =(int) Math.random()*(end-begin)+begin;
+		int x = A[pla];
+		A[pla] =  A[end];
+		A[end] = x;
+		
+//		然后进行一次交换，把这个分割元素交换到end位置上！！！！
 //		分割位置开始时在begin的位置
 		int fence = begin-1;
 		for(int i=begin;i<end;i++){

@@ -1,5 +1,5 @@
 package countSort;
-//»ùÊıÅÅĞòËã·¨
+//åŸºæ•°æ’åºç®—æ³•
 
 public class JishuSort {
 
@@ -8,7 +8,7 @@ public class JishuSort {
 	 */
 	static int Array[] = new int[20];
 	
-//	 ¼ÆÊıÅÅĞòµÄ¹ı³Ì
+//	åŸºæ•°æ’åºç®—æ³•
 	
 	public static void counting_sort(int[]A,int[]B,int k){
 		int C[] = new int[k+1];
@@ -22,17 +22,17 @@ public class JishuSort {
 			C[i]=C[i]+C[i-1];
 		}
 		for(int i=A.length-1;i>=0;i--){
-			B[C[A[i]]-1]=Array[i];//Ò»¶¨×¢ÒâÕâÀïÒª¼õÈ¥1£¡£¡£¡£¡£¡
+			B[C[A[i]]-1]=Array[i];//ä¸€å®šè¦æ³¨æ„å‡1 ï¼ï¼ï¼ï¼ï¼
 			C[A[i]]=C[A[i]]-1;
 		}
-//		Ã¿Ò»ÂÖÅÅĞòÍê£¬Êı×éÎ»ÖÃÖØĞÂÅÅÁĞ¡£
+//		è¿™é‡Œå°†ä¸€è½®æ’åºåçš„å€¼é‡æ–°èµ‹ç»™Array
 		Array=B;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		for(int i =0;i<20;i++){
-			Array[i]=(int)(Math.random()*998+1);//arrayÊÇ1µ½999Ö®¼äµÄËæ»úÊı
+			Array[i]=(int)(Math.random()*998+1);//äº§ç”Ÿéšæœºçš„ä¸‰ä½æ•´æ•°
 			System.out.print(Array[i]+" ");
 		}
 		System.out.print("\n");
@@ -42,19 +42,19 @@ public class JishuSort {
 //		A=Array;
 //		counting_sort(A, B, 10);
 	
-//		²âÊÔ¼ÆÊıÅÅĞòµÄÕıÈ·ĞÔ
+//		è®¡æ•°æ’åºçš„æµ‹è¯•æ•°æ®
 //		int A[]={1,2,3,4,5,6,7,8,9,1,1,2,3,4,5,6,7,8,9,0};
 //		int B[]=new int[20];
 //		counting_sort(A, B, 10);
 //		for(int i=0;i<A.length;i++)
 //			System.out.print(B[i]+" ");
 //		
-//		ÕâÀïÒ»¸örÎ»ÊıĞèÒª½øĞĞrÂÖµÄ¼ÆÊıÅÅĞò£¬¶øÕâÀïÕûÊıÊÇ10½øÕ¹£¬Òò´Ëk=10£»
+
 		
-//		»ùÊıÅÅĞòµÄÂÖÊı£¬Ò²¾ÍÊÇÕûÊıµÄÎ»Êı
+//		åŸºæ•°æ’åºè¦ç»è¿‡rè½®æ’åºå®Œæˆï¼Œrè¡¨ç¤ºæ’åºçš„è½®æ•°ä¹ŸåŸºæ•°æ•´æ•°çš„ä½æ•°
 		int r=3;
 		
-//		¼ÆÊıÅÅĞò£¬Ã¿¸öÔªËØµÄÇø¼äÎª0-k£»
+//		è®¡æ•°æ’åºçš„æ¯ä¸€ä¸ªå…ƒç´ ä½äº0-kè¿™ä¸ªåŒºé—´
 		
 		int k= 10;
 		

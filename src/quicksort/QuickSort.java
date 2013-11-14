@@ -16,7 +16,7 @@ public class QuickSort {
 //		分割位置开始时在begin的位置
 		int fence = begin-1;
 		for(int i=begin;i<end;i++){
-			if(A[i]<=x){
+			if(A[i]<=A[end]){
 				fence++;//分割位置增加1
 //				交换分割位置元素与此此时比分割元素小的位置的元素
 				int temp = A[fence];

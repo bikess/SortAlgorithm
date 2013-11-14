@@ -7,7 +7,7 @@ public class QuickSort {
 //		int x = A[end];
 //		在begin到end之间随机选取一个元素作为分割元素有利于提高快速排序的性能
 	
-		int pla =(int) Math.random()*(end-begin)+begin;
+		int pla =(int) Math.random()*(end-begin)+begin; //得到一个从begin到end的之间的随机数
 		int x = A[pla];
 		A[pla] =  A[end];
 		A[end] = x;
